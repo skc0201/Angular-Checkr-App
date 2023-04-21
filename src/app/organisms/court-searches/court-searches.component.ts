@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { COURTSERACHES_HEADER, COURT_SEARCHES } from 'src/app/shared/constants/constant-data';
 
@@ -22,15 +22,11 @@ const DATA: CourtSearch[] = [
   templateUrl: './court-searches.component.html',
   styleUrls: ['./court-searches.component.css']
 })
-export class CourtSearchesComponent implements OnInit {
+export class CourtSearchesComponent  {
   displayedColumns: string[] = [ 'search', 'status', 'date' ];
   readonly COURTSERACHES_HEADER =COURTSERACHES_HEADER;
   readonly COURT_SEARCHES = COURT_SEARCHES;
   dataSource = new MatTableDataSource<CourtSearch>(DATA);;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
